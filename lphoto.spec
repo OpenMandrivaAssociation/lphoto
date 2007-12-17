@@ -21,7 +21,6 @@ Release: 	%{release}
 Source0: 	http://software.lindows.com/emptypool//lindowsos/pool/main/l/lphoto/%{name}_%{ver}%{extraver}.tar.bz2
 License:	GPL
 Group: 		Graphics
-BuildRoot: 	%{_tmppath}/%{name}-buildroot
 Prefix: 	%{_prefix}
 Url: 		http://www.linspire.com/lphoto
 BuildRequires:	python-devel 
