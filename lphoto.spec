@@ -1,16 +1,16 @@
 %define name lphoto
-%define ver 1.0.13
-%define rel %mkrel 3
-%define extraver -0.0.0.45.lindows0.1
+%define ver 1.0.69
+%define rel %mkrel 1
+%define extraver -0.0.0.50.linspire2.1
 %define pyver %(python -V 2>&1 | cut -f2 -d" " | cut -f1,2 -d".")
 
 %define have_pre %(echo %ver|awk '{p=0} /[a-z,A-Z][a-z,A-Z]/ {p=1} {print p}')
 %if %have_pre
 %define version %(perl -e '$name="%ver"; print ($name =~ /(.*?)[a-z]/);')
-%define release %mkrel 3
+%define release %mkrel %rel
 %else
 %define version %ver
-%define release %mkrel 3
+%define release %mkrel %rel
 %endif
 
 Summary: 	Lphoto photo album
@@ -18,8 +18,8 @@ Name: 		%{name}
 Version: 	%{version}
 Release: 	%{release}
 # http://www.linspire.com/lindows_products_details.php?id=12424&pg=specs
-Source0: 	http://software.lindows.com/emptypool//lindowsos/pool/main/l/lphoto/%{name}_%{ver}%{extraver}.tar.bz2
-License:	GPL
+Source0: 	http://software.linspire.com/pool-src/l/lphoto/%{name}_%{ver}%{extraver}.tar.gz
+License:	GPLv2+
 Group: 		Graphics
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
 Prefix: 	%{_prefix}
@@ -33,7 +33,7 @@ Requires:	PyQt
 LPhoto Photo Album
 
 %prep
-%setup -q -n %{name}-%ver
+%setup -q -n marlin_build-freespire_lphoto-1.0
 
 %build
 
