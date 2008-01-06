@@ -44,16 +44,11 @@ mkdir -p %{buildroot}/{%{_menudir},%{_miconsdir},%{_liconsdir}}
 convert -resize 16x16 %{name}.png %{buildroot}/%{_miconsdir}/%{name}.png
 convert -resize 32x32 %{name}.png %{buildroot}/%{_iconsdir}/%{name}.png
 install %{name}.png %{buildroot}/%{_liconsdir}/%{name}.png
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat > %{buildroot}/%{_menudir}/%{name} << EOF
-?package(%{name}):\
-command="%{_bindir}/%{name}" \
-needs="x11" \
-icon="%{name}.png" \
-section="Multimedia/Graphics" \
-title="LPhoto" \
-longtitle="LPhoto photo album"
-EOF
+
+desktop-file-install --vendor='' \
+	--dir %buildroot%_datadir/applications \
+	--add-category='Qt' \
+	lphoto.desktop
 
 %post
 %update_menus
@@ -67,10 +62,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 %{_bindir}/%{name}
-%{_libdir}/python%{pyver}/site-packages/*
+%python_sitelib/Lphoto
 %{_iconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
-%{_menudir}/%{name}
-%doc LICENSE.GPL
-
+%{_datadir}/applications/%{name}.desktop
