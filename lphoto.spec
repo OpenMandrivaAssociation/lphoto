@@ -27,6 +27,7 @@ Url: 		http://www.linspire.com/lphoto
 BuildRequires:	python-devel 
 BuildRequires:  ImageMagick
 BuildRequires:  PyQt
+BuildRequires:	desktop-file-utils
 Requires:	PyQt
 
 %description
