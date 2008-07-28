@@ -1,6 +1,6 @@
 %define name lphoto
 %define ver 1.0.69
-%define rel %mkrel 1
+%define rel %mkrel 3
 %define extraver -0.0.0.50.linspire2.1
 %define pyver %(python -V 2>&1 | cut -f2 -d" " | cut -f1,2 -d".")
 
