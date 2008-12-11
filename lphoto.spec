@@ -25,7 +25,7 @@ BuildRoot: 	%{_tmppath}/%{name}-buildroot
 Prefix: 	%{_prefix}
 Url: 		http://www.linspire.com/lphoto
 BuildRequires:	python-devel 
-BuildRequires:  ImageMagick
+BuildRequires:  imagemagick
 BuildRequires:  PyQt
 BuildRequires:	desktop-file-utils
 Requires:	PyQt
