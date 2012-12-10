@@ -72,3 +72,55 @@ rm -rf $RPM_BUILD_ROOT
 %{_miconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_datadir}/applications/%{name}.desktop
+
+
+%changelog
+* Sat Nov 13 2010 Bogdano Arendartchuk <bogdano@mandriva.com> 1.0.69-6mdv2011.0
++ Revision: 597040
+- rebuild for python 2.7
+
+* Mon Sep 14 2009 Thierry Vignaud <tv@mandriva.org> 1.0.69-5mdv2010.0
++ Revision: 439608
+- rebuild
+
+* Mon Jan 05 2009 Funda Wang <fwang@mandriva.org> 1.0.69-4mdv2009.1
++ Revision: 324927
+- rebuild
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - lowercase ImageMagick
+
+* Mon Jul 28 2008 Thierry Vignaud <tv@mandriva.org> 1.0.69-3mdv2009.0mdv2009.0
++ Revision: 251424
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Sun Jan 06 2008 Funda Wang <fwang@mandriva.org> 1.0.69-1mdv2008.1mdv2008.1
++ Revision: 145957
+- BR desktop-file-utils
+- fix libdir
+- switch to xdg menu entry
+- New version 1.0.69
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+    - import lphoto
+
+
+* Fri Nov 04 2005 Nicolas Lécureuil <neoclust@mandriva.org> 1.0.13-3mdk
+- Fix BuildRequires
+- %%mkrel
+
+* Sun Dec 05 2004 Michael Scherer <misc@mandrake.org> 1.0.13-2mdk
+- Rebuild for new python
+
+* Thu Jun 10 2004 Buchan Milne <bgmilne@linux-mandrake.com> 1.0.13-1mdk
+-1.0.13
+
+* Tue Apr 11 2004 Buchan Milne <bgmilne@linux-mandrake.com> 0.11-1mdk
+- First Mandrake package
