@@ -13,7 +13,7 @@
 %define release %mkrel %rel
 %endif
 
-Summary: 	Lphoto photo album
+Summary: 	Photo album
 Name: 		%{name}
 Version: 	%{version}
 Release: 	%{release}
