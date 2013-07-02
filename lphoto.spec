@@ -1,3 +1,5 @@
+%define debug_package %{nil}
+
 %define name lphoto
 %define ver 1.0.69
 %define rel 6
@@ -14,7 +16,7 @@
 %endif
 
 Summary: 	Photo album
-Name: 		%{name}
+Name: 		lphoto
 Version: 	%{version}
 Release: 	%{release}
 # http://www.linspire.com/lindows_products_details.php?id=12424&pg=specs
@@ -112,7 +114,7 @@ rm -rf $RPM_BUILD_ROOT
     - import lphoto
 
 
-* Fri Nov 04 2005 Nicolas Lécureuil <neoclust@mandriva.org> 1.0.13-3mdk
+* Fri Nov 04 2005 Nicolas LÃ©cureuil <neoclust@mandriva.org> 1.0.13-3mdk
 - Fix BuildRequires
 - %%mkrel
 
