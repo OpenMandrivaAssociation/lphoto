@@ -25,7 +25,7 @@ License:	GPLv2+
 Group: 		Graphics
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
 Prefix: 	%{_prefix}
-Url: 		http://www.linspire.com/lphoto
+Url: 		https://www.linspire.com/lphoto
 BuildRequires:	python-devel 
 BuildRequires:  imagemagick
 BuildRequires:  PyQt
