@@ -9,10 +9,10 @@
 %define have_pre %(echo %ver|awk '{p=0} /[a-z,A-Z][a-z,A-Z]/ {p=1} {print p}')
 %if %have_pre
 %define version %(perl -e '$name="%ver"; print ($name =~ /(.*?)[a-z]/);')
-%define release %mkrel %rel
+%define release %rel.1
 %else
 %define version %ver
-%define release %mkrel %rel
+%define release %rel.1
 %endif
 
 Summary: 	Photo album
